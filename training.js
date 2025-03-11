@@ -593,6 +593,253 @@
 // user.age = -7; // Output: Age cannot be negative!
 // console.log(user.age); // Output: 25
 
+// class Car {
+//     constructor(brand, model) {
+//         this.brand = brand;
+//         this.model = model;
+//     }
+
+//     details() {
+//         return `${this.brand} ${this.model}`;
+//     }
+// }
+
+// const myCar = new Car("Toyota", "Camry");
+// console.log(myCar.details()); // Output: Toyota Camry
+
+// // Creating another new object
+// const anotherCar = new Car("Honda", "Civic");
+// console.log(anotherCar.details()); // Output: Honda Civic
+
+// class Calculator {
+//     add(a, b) {
+//         return a + b;
+//     }
+
+//     subtract(a, b) {
+//         return a - b;
+//     }
+
+//     multiply(a,b){
+//         return a*b
+//     }
+// }
+
+// const calc = new Calculator();
+// console.log(calc.add(5, 3));      
+// console.log(calc.subtract(5, 3)); 
+// console.log(calc.multiply(5,3));
+
+
+//class one
+
+// class Person {
+//     constructor(name, age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+
+//     // Method
+//     greet() {
+//         return `Hello, my name is ${this.name}.`;
+//     }
+// }
+
+// const person1 = new Person("Alice", 25);
+// console.log(person1.greet());  
+
+// const person2=new Person("Tamizh",27);
+// console.log(person2.greet())
+
+//class two
+
+// class Car {
+//     constructor(brand, model) {
+//         this.brand = brand;
+//         this.model = model;
+//     }
+
+
+// //methods
+//     start() {
+//         console.log(`${this.brand} ${this.model} is starting...`);
+//     }
+
+//     stop() {
+//         console.log(`${this.brand} ${this.model} is stopping...`);
+//     }
+// }
+
+// const myCar1 = new Car("Toyota", "Corolla");
+// const mycar2= new Car("suzuki","alto");
+// myCar1.start();  
+// mycar2.stop();   
+
+//Inheritance:
+
+// class Animal {
+//     constructor(name) {
+//         this.name = name;
+//     }
+
+//     speak() {
+//         console.log(`${this.name} makes a sound.`);
+//     }
+// }
+
+// class Dog extends Animal {
+//     speak() {
+//         console.log(`${this.name} barks.`);
+//     }
+// }
+
+// const dog1 = new Dog("Buddy");
+// dog1.speak();  
+
+// class Animal {
+//     constructor(name) {
+//         this.name = name;
+//     }
+
+//     speak() {
+//         console.log(`${this.name} makes a sound.`);
+//     }
+// }
+
+
+
+// class Dog extends Animal {
+//     speak() {
+//         // Call the parent class's speak method
+//         super.speak();
+//         console.log(`${this.name} barks.`);
+//     }
+// }
+
+// const dog1 = new Dog("Buddy");
+// dog1.speak();
+
+
+
+
+
+
+// class Person {
+//     constructor(name, year, gender) {
+//         this.name = name;
+//         this.year = year;
+//         this.gender = gender;
+//     }
+
+//     calage() {
+//         console.log(`Age: ${new Date().getFullYear() - this.year}`);
+//     }
+// }
+
+// class Employee extends Person {
+//     constructor(name, year, gender, empId, salary) {
+//         super(name, year, gender);
+//         this.empId = empId;
+//         this.salary = salary;
+//     }
+
+//     calsalary() {
+//         return this.salary * 12;
+//     }
+
+//     empdetails() {
+//         console.log(`Name: ${this.name}`);
+//         console.log(`Employee ID: ${this.empId}`);
+//         console.log(`Gender: ${this.gender}`);
+//         console.log(`Monthly Salary: ${this.salary}`);
+//         console.log(`Annual Salary: ${this.calsalary()}`);
+//     }
+// }
+
+// // Creating an Employee object
+// let tam = new Employee("Tamizh", 1998, "male", 101, 18000);
+
+// // Checking age
+// tam.calage();            // Calling the age calculation method
+
+// // Checking salary
+// console.log("Annual Salary:", tam.calsalary())
+
+
+// class Person{
+//     constructor(name,year,gender){
+//         this.name=name;
+//         this.year=year;
+//         this.gender=gender;
+        
+//     }
+//     calage(){
+//         return (new Date().getFullYear()-this.year)
+//     }
+// }
+
+// class Employee extends Person{
+//     constructor(name,year,gender,empId,salary){
+
+//         super(name,year,gender);
+//         this.empId=empId;
+//         this.salary=salary;
+//     }
+//     calsalary(){
+//         return this.salary * 12
+//     }  
+//     empdetails(){
+//         console.log(this.name);
+//         console.log(this.empId);
+    
+        
+//     }
+// }
+
+// let tam=new Employee("tamizh",1998,"male",101,12000)
+// console.log(tam.calage())
+
+//prototypes
+
+// function Person(name, age) {
+//     this.name = name;
+//     this.age = age;
+// }
+
+// Person.prototype.greet = function() {
+//     console.log(`Hello, my name is ${this.name}.`);
+// };
+
+// const person1 = new Person("John", 30);
+// person1.greet();  
+
+//private fields
+
+// class Person {
+//     // Private field
+//     #age;
+
+//     constructor(name, age) {
+//         this.name = name;
+//         this.#age = age;  // Accessing the private field
+//     }
+
+//     // Private method
+//     #getAge() {
+//         return this.#age;
+//     }
+
+//     publicMethod() {
+//         console.log(`Name: ${this.name}`);
+//         console.log(`Age: ${this.#getAge()}`);  
+//     }
+    
+// }
+
+// const person1 = new Person("Tamizh", 25);
+// person1.publicMethod();  
+     
+
 
 
 
