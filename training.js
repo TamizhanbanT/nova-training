@@ -838,6 +838,149 @@
 
 // const person1 = new Person("Tamizh", 25);
 // person1.publicMethod();  
+
+const person1 = new Person("Tamizh", 25);
+// person1.publicMethod();  
+
+// getter and setter 
+
+// class Rectangle {
+//     constructor(width, height) {
+//         this._width = width;
+//         this._height = height;
+//     }
+
+//     get area() {
+//         return this._width * this._height;
+//     }
+
+//     set width(value) {
+//         if (value > 0) this._width = value;
+//         else console.log("Width must be positive.");
+//     }
+
+//     set height(value) {
+//         if (value > 0) this._height = value;
+//         else console.log("Height must be positive.");
+//     }
+// }
+
+// const rect = new Rectangle(5, 10);
+// console.log(rect.area); 
+// rect.width = 7; // width must be positive 
+// rect.height = 12;
+// console.log(rect.area); 
+
+
+// class User {
+//     #password;
+
+//     constructor(username, password) {
+//         this.username = username;
+//         this.#password = this.#encryptPassword(password);
+//     }
+
+//     #encryptPassword(password) {
+//         return `encrypted_${password}`;  // Mock encryption
+//     }
+
+//     checkPassword(password) {
+//         return this.#password === this.#encryptPassword(password);
+//     }
+// }
+
+// const user = new User("john_doe", "mySecret123");
+// console.log(user.checkPassword("mySecret123"));  // Output: true
+// // console.log(user.#password);  // Error: Private field '#password' must be declared
+
+
+//call back:
+
+
+// function doSomething() {
+//     console.log("Doing something...");
+   
+// }
+
+// function afterSomething(x) {
+//     console.log("Done!");
+//     x()
+   
+// }
+
+// afterSomething(doSomething);
+
+// function greet(name, callback) {
+//     console.log("Hello, " + name + "!");
+//     callback();
+// }
+
+// function sayGoodbye() {
+//     console.log("Goodbye!");
+// }
+
+// greet("Tamizh", sayGoodbye);
+
+
+
+
+// function calculate(a, b, callback) {
+//     let result = a + b;
+//     callback(result);
+// }
+
+// function displayResult(sum) {
+//     console.log(sum);
+// }
+
+// function multiplication(a, b) {
+//     let multip = a * b;
+//     console.log( multip);
+// }
+
+// calculate(5, 7, displayResult);  
+
+// multiplication(3, 5);  
+
+// function getUserData(callback) {
+//     console.log("Fetching user data...");
+//     setTimeout(() => {
+//         const user = { name: "Tamizh", age: 25 };
+//         callback(user);
+//     }, 2000);
+// }
+
+// function displayUserData(user) {
+//     console.log("User Data:");
+//     console.log("Name:", user.name);
+//     console.log("Age:", user.age);
+// }
+
+// getUserData(displayUserData);
+
+
+// function getUserData() {
+//     console.log("Fetching user data...");
+//     return new Promise((resolve, reject) => {
+        
+//         setTimeout(() => {
+//             const user = { name: "Tamizh", age: 25 };
+//             resolve(user); 
+//         }, 2000);
+//     });
+// }
+
+// function displayUserData(user) {
+//     console.log("User Data:");
+//     console.log("Name:", user.name);
+//     console.log("Age:", user.age);
+// }
+
+
+// getUserData()
+//     .then(displayUserData)  
+//     .catch((error) => console.error("Error:", error));
+
      
 
 
